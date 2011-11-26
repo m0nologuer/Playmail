@@ -49,9 +49,11 @@ class MessagesController < ApplicationController
   def create
     @message = Contact.find(params[:message][:contact_id]).messages.create(params[:message])
     @message.subject = truncate(params[:message][:description], 20, "...")
-
+    
     respond_to do |format|
       if @message.save
+        Mailer.send_email(@message.contact.email, @message.subject)
+        
         format.html { redirect_to @message, notice: 'Message was successfully created.' }
         format.json { render json: @message, status: :created, location: @message }
       else

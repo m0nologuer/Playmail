@@ -7,7 +7,7 @@
 */
 a{
 	text-decoration:none;
-	color:#333;
+	color:#999;
 }
 a:hover{
 	color:#666;
@@ -47,7 +47,7 @@ a:hover{
 	font-family:Helvetica, Arial, sans-serif;
 	font-weight:680;
 	font-size:20;
-	color:#999;
+	color:#aaa;
 	padding:10px;
 	margin:10px;
 	-webkit-border-radius: 10px;
