@@ -1,0 +1,12 @@
+#title 
+	contacts
+	%br
+	%br
+-@contacts.each do |contact| 
+	#smallBox
+		#field
+			%span#left= link_to contact.contact, new_message_path(:contact_id => contact.id)
+#title
+	%br
+	%br
+= link_to (image_tag "Add Contact.png"), new_contact_path

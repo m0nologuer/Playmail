@@ -1,0 +1,9 @@
+#form
+	= form_for(@contact) do |f|
+		#field
+			= f.label :name 
+			= f.text_field :contact, :class => "inputField"
+		#field
+			= f.label :email
+			= f.text_field :email, :class => "inputField"		
+		=image_submit_tag "Add Contact.png"

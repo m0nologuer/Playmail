@@ -1,0 +1,12 @@
+#title
+	=image_tag "playmail.png", :size => "128x128" 
+	Playmail
+	%span#beta BETA
+%br
+%br
+=link_to (image_tag "Create Mail.png", :mouseover =>"Create Mail Pressed.png"), :controller => "contacts", :action => "index"
+%br
+=link_to (image_tag "Inbox.png", :mouseover =>"Inbox Pressed.png"), :controller => "messages", :action => "index"
+%br
+%br
+=link_to (image_tag "Add Contact.png", :mouseover =>"Add Contact Pressed.png"), :controller => "contacts", :action => "new"

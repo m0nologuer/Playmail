@@ -1,0 +1,9 @@
+#box
+	#title
+		#left Outbox
+		-@messages.each do |message|
+			#field
+				%span#read= link_to message.contact.contact, message
+				%span#subject= message.subject
+				%br
+= link_to 'New Message', new_message_path

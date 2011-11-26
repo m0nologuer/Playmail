@@ -1,0 +1,133 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+a{
+	text-decoration:none;
+	color:#333;
+}
+a:hover{
+	color:#666;
+}
+#container{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	width:1024px;
+}
+#from{
+	text-align:left;
+}
+#form{
+	width:700px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:100px;
+}
+#icon{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#done{
+	position:absolute;
+	top:20px;
+	right:20px;
+}
+#smallBox{
+	width:200px;
+	float:left;
+	overflow:hidden;
+}
+#field{
+	position:relative;
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:680;
+	font-size:20;
+	color:#999;
+	padding:10px;
+	margin:10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border:1px solid #999;
+	
+	background-image: linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -o-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -moz-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -webkit-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -ms-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.36, rgb(235,235,235)),
+		color-stop(0.68, rgb(255,255,255))
+	);
+}
+.message{
+	padding:10px;
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:200;
+	font-size:24;
+	color:#666;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.inputField{
+	background-image: "Text Input Field.png"
+	padding:5px;
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:200;
+	font-size:24;
+	color:#666;
+}
+#box{
+	height:728px;
+	text-align:center;
+	
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	border:1px solid #999;
+	
+	background-image: linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -o-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -moz-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -webkit-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -ms-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.36, rgb(235,235,235)),
+		color-stop(0.68, rgb(255,255,255))
+	);
+}
+#left{
+	text-align:left;
+	padding:15px;
+}
+#text{
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:400;
+	font-size:24;
+	color:#666;
+	padding:100px 200px;
+}
+#title{
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:600;
+	font-size:48;
+	color:#666;
+}
+#beta{
+	font-weight:100;
+	font-style:italic;
+}
