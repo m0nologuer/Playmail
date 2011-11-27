@@ -1,6 +1,7 @@
 Playmail::Application.routes.draw do
   
   root :to => "messages#home"
+  match "messages/lock" => "messages#lock"
     
   resources :contacts 
   resources :messages

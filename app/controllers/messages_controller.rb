@@ -17,6 +17,13 @@ class MessagesController < ApplicationController
     end
   end
 
+  def lock
+    respond_to do |format|
+      format.html # lock.html.haml
+      format.json { render json: @messages }
+    end
+  end
+
   # GET /messages/1
   # GET /messages/1.json
   def show
@@ -48,13 +55,11 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @message = Contact.find(params[:message][:contact_id]).messages.create(params[:message])
-    @message.subject = truncate(params[:message][:description], 20, "...")
-    
+
     respond_to do |format|
       if @message.save
-        Mailer.send_email(@message.contact.email, @message.subject)
-        
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        Failer.send_email(@message.contact.email, @message.message).deliver    
+        format.html { redirect_to message_path(@message) }
         format.json { render json: @message, status: :created, location: @message }
       else
         format.html { render action: "new" }
