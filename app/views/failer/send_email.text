@@ -1,1 +1,4 @@
 <%= @message %>
+------------------------
+This message was brought to you my Playmail.
+http://playmake.co

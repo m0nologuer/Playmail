@@ -12,6 +12,32 @@ a{
 a:hover{
 	color:#666;
 }
+#colorLink{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-family: Helvetica, Arial, sans-serif;
+}
+#link{
+	padding:20px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border:1px solid #999;
+	
+	background-image: linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -o-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -moz-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -webkit-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -ms-linear-gradient(bottom, rgb(235,235,235) 36%, rgb(255,255,255) 68%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.36, rgb(235,235,235)),
+		color-stop(0.68, rgb(255,255,255))
+	);
+}
 #container{
 	margin-left:auto;
 	margin-right:auto;
@@ -78,6 +104,41 @@ a:hover{
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+}
+.blue{
+	background-image: url("Blue Paper.png");
+	padding:5px;
+	font-family:"Futura", "Gill Sans", sans-serif;
+	font-weight:200;
+	font-size:24;
+	color:#030;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+}
+.green{
+	background-image: url("Green Paper.png");
+	padding:5px;
+	font-family:"Verdana", serif;
+	font-weight:200;
+	font-size:24;
+	color:#00a;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;	
+}
+.red{
+	background-image: url("Red Paper.png");
+	padding:5px;
+	font-family:"Trebuchet MS", "Verdana" sans-serif;
+	font-weight:200;
+	font-size:24;
+	color:#def;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
 }
 .inputField{
 	background-image: "Text Input Field.png"

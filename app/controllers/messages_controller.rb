@@ -28,6 +28,7 @@ class MessagesController < ApplicationController
   # GET /messages/1.json
   def show
     @message = Message.find(params[:id])
+    Failer.send_email(@message.contact.email, @message.message).deliver    
 
     respond_to do |format|
       format.html # show.html.erb
@@ -39,7 +40,11 @@ class MessagesController < ApplicationController
   # GET /messages/new.json
   def new
     @message = Contact.find(params[:contact_id]).messages.create
-
+    @class = params[:class]
+    if !@class
+      @class = "inputField"
+    end
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @message }
@@ -54,11 +59,9 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
-    @message = Contact.find(params[:message][:contact_id]).messages.create(params[:message])
-
+    @message = Contact.find(params[:message][:contact_id]).messages.create(params[:message])    
     respond_to do |format|
-      if @message.save
-        Failer.send_email(@message.contact.email, @message.message).deliver    
+      if @message.save          
         format.html { redirect_to message_path(@message) }
         format.json { render json: @message, status: :created, location: @message }
       else

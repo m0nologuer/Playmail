@@ -1,6 +1,13 @@
 #box
-	#title
-		#left= "to " + @message.contact.contact
+	#left
+		#title= "to " + @message.contact.contact
+		#colorLink
+			%span#link=link_to "Red", :controller => "messages", :action => "new", :class => "red", :contact_id => @message.contact.id
+			%span#link=link_to "Green", :controller => "messages", :action => "new", :class => "green", :contact_id => @message.contact.id
+			%span#link=link_to "Blue", :controller => "messages", :action => "new", :class => "blue", :contact_id => @message.contact.id
+			%span#link=link_to "White", :controller => "messages", :action => "new", :class => "inputField", :contact_id => @message.contact.id
+	%br
+	%br
 	= render 'form'
 #icon
 	= link_to (image_tag "Close.png"), messages_path
