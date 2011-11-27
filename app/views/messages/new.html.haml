@@ -6,6 +6,7 @@
 			%span#link=link_to "Green", :controller => "messages", :action => "new", :class => "green", :contact_id => @message.contact.id
 			%span#link=link_to "Blue", :controller => "messages", :action => "new", :class => "blue", :contact_id => @message.contact.id
 			%span#link=link_to "White", :controller => "messages", :action => "new", :class => "inputField", :contact_id => @message.contact.id
+			%span#link=link_to "Photo", pictures_path
 	%br
 	%br
 	= render 'form'

@@ -28,6 +28,8 @@ class MessagesController < ApplicationController
   # GET /messages/1.json
   def show
     @message = Message.find(params[:id])
+    @words = @message.message 
+    
     Failer.send_email(@message.contact.email, @message.message).deliver    
 
     respond_to do |format|

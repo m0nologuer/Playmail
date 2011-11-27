@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111125222155) do
+ActiveRecord::Schema.define(:version => 20111127120510) do
 
   create_table "contacts", :force => true do |t|
     t.string   "contact"
@@ -29,5 +29,14 @@ ActiveRecord::Schema.define(:version => 20111125222155) do
   end
 
   add_index "messages", ["contact_id"], :name => "index_messages_on_contact_id"
+
+  create_table "pictures", :force => true do |t|
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
